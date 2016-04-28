@@ -6,4 +6,28 @@
 # - Parsing SHOW BINARY LOGS;
 # - Others, ignore.
 
+# Probably can follow https://github.com/percona/percona-toolkit/blob/2.2/bin/pt-visual-explain
+
+header(){
+  echo "---------------------------------------------"
+  echo "---------- Brief output for engine ----------"
+  echo "---------------------------------------------"
+
+}
+
+#echo -e $* >> $TEMP
+ACUM="$ACUM $*"
+
+if $(grep 'INNODB MONITOR OUTPUT' $ACUM) ; then
+  header
+  grep "History" $ACUM
+fi
+
+#while [ "$1" != "" ]; do
+#  echo "Received: ${1}" && shift;
+#done;
+
+#echo $TEMP
+#rm -f $TEMP
+exit 0
 
