@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# TODO
+# - Parsing SHOW ENGINE INNODB STATUS;
+# - Parsing SHOW SLAVE STATUS;
+# - Parsing SHOW BINARY LOGS;
+# - Others, ignore.
+
+
